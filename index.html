@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <style>
+        .header {
+            margin-top: 50px;
+            animation: slideInFromLeft 1s ease-out;
+            margin-bottom: 30px; /* Adds space below the header */
+        }
+
+        .header img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .card-right img {
+            width: 100%;
+            height: 200px; /* Adjust the height */
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .card-right {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100%; /* Makes all cards have equal height */
+        }
+
+        .card-body {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Styling for <p> tags (content) */
+        .card-text {
+            font-size: 1rem;
+            color: black; 
+            line-height: 1.5;
+            margin-bottom: 15px;
+            padding: 0 10px; /* Adds some padding on the left and right */
+            text-align: justify; /* Justified alignment for better readability */
+            overflow: hidden; /* Ensures content doesn't overflow */
+            max-height: 100px; /* Ensures text doesn't overflow the card */
+        }
+
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* For Mobile responsiveness */
+        @media screen and (max-width: 500px) {
+            .header {
+                height: 200px;
+                animation: slideInFromBottom 1s ease-out;
+            }
+
+            .header img {
+                object-fit: cover;
+            }
+
+            .card-right img {
+                height: 200px;
+            }
+
+            .card-right {
+                width: 80%;
+                padding: 15px;
+                margin: 0 auto; /* Centers the cards on small screens */
+            }
+        }
+
+        @keyframes slideInFromBottom {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="position-relative">
+            <div class="small position-absolute top-0 start-0 p-3 bg-white rounded">
+                <h3>@Childhood memories!!</h3>
+            </div>
+
+            <div class="header">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/029/314/863/small_2x/back-to-school-cartoon-background-ai-photo.jpg"
+                    alt="Back to School Cartoon" />
+            </div>
+        </div>
+
+        <!-- Card Section -->
+        <div class="row row-cols-1 row-cols-md-4 g-4 mt-4">
+            <div class="col">
+                <div class="card card-right">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZmMyN2ZiY2EtMDJmNi00YTBiLTk1OTEtOWE3Y2Q2N2Y3N2VlXkEyXkFqcGc@._V1_QL75_UY281_CR11,0,190,281_.jpg"
+                        class="card-img-top" alt="Noddy">
+                    <div class="card-body">
+                        <h5 class="card-title">Noddy</h5>
+                        <p class="card-text">Noddy is an English character created by English children's author Enid
+                            Blyton. He is a wooden toy doll depicted as having a childlike view of the world..</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-right">
+                    <img src="https://rukminim2.flixcart.com/image/850/1000/l432ikw0/sticker/i/i/8/medium-oswald-wallpaper-54-sbw58-sticker-bazzar-original-imagf25zmphphugf.jpeg?q=90&crop=false"
+                        class="card-img-top" alt="Oswald">
+                    <div class="card-body">
+                        <h5 class="card-title">Oswald</h5>
+                        <p class="card-text">Oswald is a safety-conscious but fun-loving octopus who lives in an
+                            apartment complex in Big City with his dog, Weenie.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-right">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdgLGULBgBRCb0JMiPwrbDqDuPC0YJHGBoXg&s"
+                        class="card-img-top" alt="Mr.Bean">
+                    <div class="card-body">
+                        <h5 class="card-title">Mr.Bean</h5>
+                        <p class="card-text">The childish Mr Bean uses his unusual wit to fulfill everyday tasks. But,
+                            more often than not, he creates trouble for himself and those around him.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-right">
+                    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQFGFNg99Zr2L5zqLBg3rTTxh0OMvl3asuL84aU4sbFTHRzyWmSrRhj7IqJW0TsTb91Z_so"
+                        class="card-img-top" alt="Bob the Builder">
+                    <div class="card-body">
+                        <h5 class="card-title">Bob the Builder</h5>
+                        <p class="card-text">Bob Builder and his machine team are ready to tackle any project. Bob and
+                            Can-Do Crew demonstrate the power of positive thinking, problem-solving, teamwork.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
